@@ -15,6 +15,45 @@
 
 // *** Funtions Section *** //
 
+    // Button Click Functions //
+
+    $(function buttonClick() {
+        $("#cartoonCrystal").on("click", function(evt) {
+        console.log("id cartoonCrystal clicked");
+        crystal.currentTotal += crystal.crystal1;
+        console.log("current total = " + crystal.currentTotal);
+        updateCurrentTotal();
+        updateWinLoss();
+        })
+
+        $("#diamond").on("click", function(evt) {
+        console.log("id diamond clicked");
+        crystal.currentTotal += crystal.crystal2;
+        console.log("current total = " + crystal.currentTotal);
+        updateCurrentTotal();
+        updateWinLoss();
+        })
+
+        $("#iceCrystal").on("click", function(evt) {
+        console.log("id iceCrystal clicked");
+        crystal.currentTotal += crystal.crystal3;
+        console.log("current total = " + crystal.currentTotal);
+        updateCurrentTotal(); 
+        updateWinLoss();                    
+        })
+
+        $("#pyrite").on("click", function(evt) {
+        console.log("id pyrite clicked");
+        crystal.currentTotal += crystal.crystal4;
+        console.log("current total = " + crystal.currentTotal);
+        updateCurrentTotal();
+        updateWinLoss();                        
+        })
+
+    });
+
+    // Create Random Number Functions //
+
     function getTotalNumber() {
         var minNumber = 19;
         var maxNumber = 120;
@@ -31,9 +70,13 @@
         console.log("Crystal random number within function: " + randomNumber)
     }
 
+    // Debug Function //
+
     function debugVariables() {
     	console.log("Random Total: " + crystal.randomNumber + " /crystal 1 = " + crystal.crystal1 + " /Crystal 2 = " + crystal.crystal2 + " /Crystal 3 = " + crystal.crystal3 + " /Crystal 4 = " + crystal.crystal4);    	
     }   
+
+    // Update Functions //
 
     function updateCurrentTotal() {
         $("#gameCurrentTotal").text("Current Total: " + crystal.currentTotal);
