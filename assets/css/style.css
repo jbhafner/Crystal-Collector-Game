@@ -1,0 +1,63 @@
+.crystal-image {
+	height: 150px;
+	width: 150px;
+}
+
+.crystal-list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap/*.product-item*/
+}
+
+#crystal-list .crystal-item {
+    position: relative;
+    color: #fff;
+    overflow: hidden;
+    width: 50%;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    opacity: .8/*.product-name*/
+}
+
+#crystal-list .crystal-item .crystal-name {
+    background: #d14348;
+    color: #f3d350;
+    font-weight: 700;
+    font-size: 80%;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: none
+}
+
+#crystal-list .crystal-item:focus .crystal-name,
+#crystal-list .crystal-item:hover .crystal-name {
+    display: block
+}
+
+#crystal-list .crystal-item:focus,
+#crystal-list .crystal-item:hover {
+    opacity: 1;
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+    z-index: 1
+}
+
+#crystal-list .crystal-item:focus .crystal-name,
+#crystal-list .crystal-item:hover .crystal-name {
+    display: block;
+    -webkit-animation: a 1s;
+    animation: a 1s
+}
+
+.crystal-name {
+    text-align: center;
+}
