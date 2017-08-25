@@ -61,3 +61,36 @@
 .crystal-name {
     text-align: center;
 }
+
+.box {
+    border: 1px solid gray;
+    background-color: #b3c8d0;
+    font-size:12pt;
+    padding-left: 10pt;
+    padding-right: 10pt;
+    padding-top: 5pt;
+    min-height: 200px;
+    width: 300px;
+    margin-top: 6px;
+}
+
+.box p {
+    margin: 0 1pt 0 2pt
+}
+
+span {
+    display: block;
+    text-align: center;
+    align-content: center;
+    font-size: 18pt;
+    margin-bottom: 6px;
+}
+
+.divCenter {
+    text-align: center;
+}
+
+.inxCenter{
+    text-align: center;
+    width: 300px;
+}

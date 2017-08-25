@@ -3,9 +3,9 @@
 <head>
 	<title>Crystal Collector</title>
 
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/cerulean/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
@@ -29,42 +29,61 @@
 		<div class="row">
 			<div class="col-md-1"></div>
 			<div class="col-md-3">
-				<p><h2 id="gameRandomTotal">Crystal Target Total: 0</h2></p>
+				<p><h3 id="gameRandomTotal">Crystal Target Total: 0</h3></p>
 			</div>
 			<div class="col-md-1"></div>
 			<div class="col-md-3">
-				<p><h2 id="gameCurrentTotal">Current Total: 0</h2></p>
+				<p><h3 id="gameCurrentTotal">Current Total: 0</h3></p>
 			</div>
 			<div class="col-md-1"></div>		
 			<div class="col-md-3">
-				<p><h2 id="gameStatus"></h2></p>
+				<p><h3 id="gameStatus"></h3></p>
 			</div>		
 		</div>
 	</div>
 
-
 		<div class="row">
 			<div class="col-md-1"></div>
-			<div class="col-md-11">		
+			<div class="col-md-7" class="divCenter">
+			<span>Select Your Crystal!</span>		
 			  <ul class="crystal-list">
 			    <li class="crystal-item" id="cartoonCrystal">
 			        <img class="crystal-image" src="assets/images/cartoonCrystal.png" alt="Cartoon Crystal">
-			        <h2 class="crystal-name" data-type="mineral">Shiny Crystal</h2>
+			        <h4 class="crystal-name" data-type="mineral">Shiny Crystal!</h4>
 			    </li>
 			    <li class="crystal-item" id="diamond">
 			        <img class="crystal-image" src="assets/images/diamond.png" alt="Cartoon Diamond">
-			        <h2 class="crystal-name" data-type="mineral">Beautiful Diamond</h2>
+			        <h4 class="crystal-name" data-type="mineral">Beautiful Diamond!</h4>
 			    </li>
 			    <li class="crystal-item" id="iceCrystal">
 			        <img class="crystal-image" src="assets/images/iceCrystal.jpg" alt="Ice Crystal">
-			        <h2 class="crystal-name" data-type="mineral">Ice Crystal!</h2>
+			        <h4 class="crystal-name" data-type="mineral">Ice Crystal!</h4>
 			    </li>
 			    <li class="crystal-item" id="pyrite">
 			        <img class="crystal-image" src="assets/images/pyrite.jpg" alt="Pyrite">
-			        <h2 class="crystal-name" data-type="mineral">Fools Gold!</h2>
+			        <h4 class="crystal-name" data-type="mineral">Fools Gold!</h4>
 			    </li>
 			  </ul>
 			</div>
+			<div class="col-md-3">
+				<span class="inxCenter">Instructions</span>
+				<div class="inxCenter">
+					<button type="button" class="btn btn-primary" id="hide">Hide</button>
+					<button type="button" class="btn btn-success" id="show">Show</button>
+					<button type="button" class="btn btn-danger" id="toggle">Toggle</button>
+					<div id="inxBox" class="box">
+						<p>You will be given a random number at the start of the game (Crystal Total).<br><br>
+
+						There are four crystals below.  By clicking on a crystal you will add a specific (random) amount of 
+						points to your total score (Current Total).<br><br>
+
+						After each game, all numbers will be randomly generated again<br><br></p>
+					</div>
+				</div>
+			</div>	
+<!-- 			<button type="button" class="btn btn-primary" id="hide">Hide Instructions</button>
+			<button type="button" class="btn btn-success" id="show">Show Instructions</button> -->
+			<div class="col-md-1"></div>
 		</div>
 	
 <script type="text/javascript" src="assets/javascript/games.js"></script>

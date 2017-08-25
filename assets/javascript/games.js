@@ -15,7 +15,7 @@
 
 // *** Funtions Section *** //
 
-    // Button Click Functions //
+    // Button Click Functions - Crystals - increment value of crystal to currentTotal //
 
     $(function buttonClick() {
         $("#cartoonCrystal").on("click", function(evt) {
@@ -52,12 +52,27 @@
 
     });
 
+    // Hide and Show Text Instructions //
+
+    $(document).ready(function(){
+        $("#hide").click(function(){
+            $("#inxBox").hide(1000,"swing");
+        });
+        $("#show").click(function(){
+            $("#inxBox").show("fast");
+        });
+        $("#toggle").click(function(){
+            $("#inxBox").toggle("slow linear");
+        });
+    });
+
     // Create Random Number Functions //
 
     function getTotalNumber() {
         var minNumber = 19;
         var maxNumber = 120;
-        randomNumber = Math.floor(Math.random() * (maxNumber + 1) + minNumber);
+        // randomNumber = Math.floor(Math.random() * (maxNumber + 1) + minNumber);
+        randomNumber = Math.floor(Math.random()*(maxNumber-minNumber)+minNumber);
         return randomNumber;
         console.log("Game random number within function: " + randomNumber)
     }
@@ -65,7 +80,8 @@
      function getCrystalNumber() {
         var minNumber = 1;
         var maxNumber = 12;
-        randomNumber = Math.floor(Math.random() * (maxNumber + 1) + minNumber);
+        // randomNumber = Math.floor(Math.random() * (maxNumber + 1) + minNumber);
+        randomNumber = Math.floor(Math.random()*(maxNumber-minNumber)+minNumber);        
         return randomNumber;
         console.log("Crystal random number within function: " + randomNumber)
     }
@@ -101,6 +117,7 @@
             console.log("Win Total is " + crystal.win);
             setRandomNumbers();
             resetOtherVariables();
+            pulse();
         }
 
         // if user goes over and loses
@@ -110,6 +127,7 @@
             $("#gameLoss").text("Losses: " + crystal.loss);
             setRandomNumbers();
             resetOtherVariables();
+            pulse();
         }    
 
     }
@@ -117,8 +135,15 @@
     function resetOtherVariables () {
         crystal.currentTotal = 0;
         numbersGuessed = [];
-    $("#gameRandomTotal").text("Crystal Total: " + crystal.randomNumber);
-    $("#gameCurrentTotal").text("Current Total: " + crystal.currentTotal);      
+        $("#gameRandomTotal").text("Crystal Total: " + crystal.randomNumber);
+        $("#gameCurrentTotal").text("Current Total: " + crystal.currentTotal);      
+    }
+
+    function pulse () {
+        $("#gameStatus").fadeTo(200,0.3)
+        .fadeTo(200,1.0)
+        .fadeTo(200,0.3)
+        .fadeTo(200,1.0);        
     }
 
 
