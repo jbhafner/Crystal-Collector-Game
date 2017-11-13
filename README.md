@@ -10,4 +10,4 @@ There are four crystals below. By clicking on a crystal you will add a specific 
 
 After each game, all numbers will be randomly generated again
 
-<img src="images/screenshot.jpg">
+<img src="images/screenshot.JPG">
